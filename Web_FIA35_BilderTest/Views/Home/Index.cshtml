@@ -1,0 +1,45 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Web_FIA35_BilderTest.Models.DateiInfos
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+</head>
+<body>
+    <div style="width:80%;margin:auto">
+        <h1><strong>Bilder Test 👌</strong></h1>
+    </div>
+    <div style="width:80%;margin:auto;background-color:cornflowerblue;padding:10px;border-radius:10px">
+        <h3>Meine dollen Bilder</h3>
+        <img src="https://images.unsplash.com/photo-1612021470627-ca1cb2d2ee92?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlsZGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
+        <br />
+        <img src="https://via.placeholder.com/333/0000FF/808080?Text=Digital.com" /> <!-- Wird ein Query-String angehängt, wird das Bild nicht aus dem Cache genommen -->
+        <img src="https://via.placeholder.com/333/0000FF/808080?@Guid.NewGuid()" /> <!-- Workaround, um ein Bild immer vom Server zu holen und nicht aus dem Cache zu nehmen -->
+        <img src="/Bilder/photo-1564648351416-3eec9f3e85de.jfif" asp-append-version="true" style="width:50%" /> <!-- Workaround, um ein Bild immer vom Server zu holen und nicht aus dem Cache zu nehmen -->
+        <img src="https://via.placeholder.com/456/000FFF/808080" alt="Bild von Via-Placeholder.com" title="Dies ist das Bild, was grade zu sehen ist. ??" />
+        <img src="https://viii.placeholder.com/456/000FFF/808080" alt="Nicht wirklich vorhandenes Bild" style="height:40%" />
+    </div>
+    <div style="width:80%;margin:auto;background-color:aqua;padding:10px;border-radius:10px">  <!-- "div" ist ein Container, ein Block, der die gesamte Breite einnimmt -->
+
+
+        @for (int i = 0; i < Model.DateiListe.Count; i++)
+        {
+            <img src="/Bilder/@Model.DateiListe[i].Name" title="@Model.DateiListe[i].Length" />
+        }
+        @foreach (var Datei in Model.DateiListe)
+        {
+            <img src="/Bilder/@Datei.Name" title="@Datei.Length" />
+        }
+    </div>
+
+</body>
+</html>
