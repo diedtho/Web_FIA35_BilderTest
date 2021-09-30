@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_FIA35_BilderTest", "Web_FIA35_BilderTest\Web_FIA35_BilderTest.csproj", "{DDCC6C35-5A78-4791-8309-88FDBC2D536E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_FIA35_BilderTestFlexbox", "Web_FIA35_BilderTest\Web_FIA35_BilderTestFlexbox.csproj", "{DDCC6C35-5A78-4791-8309-88FDBC2D536E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

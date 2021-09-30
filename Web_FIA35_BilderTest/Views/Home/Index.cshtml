@@ -13,12 +13,51 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 
+    <!-- CSS-Bereich -->
+    <style>
+
+        p {
+            color:red;
+        }
+
+        #Oben{color:green;}
+
+        h3 {
+            color:lawngreen;
+            font-size:11pt;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        <!-- Id -->
+             .Hintergrund{background-color:lightblue}
+
+        <!-- Klasse -->
+        .Ueberschrift {
+            color: maroon;
+            font-size: 33pt;
+            font-style:oblique;
+        }
+
+        .Container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .Container img {
+                border-radius: 0.5em;
+                margin: 0.5em;
+                width: 20em;
+            }
+    </style>
+
 </head>
 <body>
-    <div style="width:80%;margin:auto">
-        <h1><strong>Bilder Test 👌</strong></h1>
+    <div style="width:90%;margin:auto">
+        <h1 class="Ueberschrift Hintergrund" ><strong>Bilder Test 👌</strong></h1>
+        <h2 class="Ueberschrift">Unterklasse H2</h2>
+        <p style="color:purple" id="Oben" class="Ueberschrift">Noch was</p>
     </div>
-    <div style="width:80%;margin:auto;background-color:cornflowerblue;padding:10px;border-radius:10px">
+    <div style="width:80%;margin:auto;background-color:cornflowerblue;padding:1em;border-radius:10px">
         <h3>Meine dollen Bilder</h3>
         <img src="https://images.unsplash.com/photo-1612021470627-ca1cb2d2ee92?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlsZGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
         <br />
@@ -28,7 +67,8 @@
         <img src="https://via.placeholder.com/456/000FFF/808080" alt="Bild von Via-Placeholder.com" title="Dies ist das Bild, was grade zu sehen ist. ??" />
         <img src="https://viii.placeholder.com/456/000FFF/808080" alt="Nicht wirklich vorhandenes Bild" style="height:40%" />
     </div>
-    <div style="width:80%;margin:auto;background-color:aqua;padding:10px;border-radius:10px">  <!-- "div" ist ein Container, ein Block, der die gesamte Breite einnimmt -->
+    <div style="width:80%;margin:auto;background-color:aqua;padding:10px;border-radius:10px">
+        <!-- "div" ist ein Container, ein Block, der die gesamte Breite einnimmt -->
 
 
         @for (int i = 0; i < Model.DateiListe.Count; i++)
