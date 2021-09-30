@@ -1,0 +1,52 @@
+﻿{
+    color: blue
+}
+
+a:active {
+    color: red
+}
+
+a:hover {
+    color: yellow
+}
+
+a:visited {
+    color: green
+}
+
+p {
+    color: red;
+}
+
+#Oben {
+    color: green;
+}
+
+h3 {
+    color: lawngreen;
+    font-size: 11pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+<!-- Id -->
+.Hintergrund {
+    background-color: lightblue
+}
+
+<!-- Klasse -->
+.Ueberschrift {
+    color: maroon;
+    font-size: 33pt;
+    font-style: oblique;
+}
+
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .Container img {
+        border-radius: 0.5em;
+        margin: 0.5em;
+        width: 20em;
+    }
